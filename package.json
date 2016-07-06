@@ -1,0 +1,17 @@
+{
+  "name": "contact_list_app",
+  "version": "1.0.0",
+  "description": "Contact list app using Full MEAN Stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express":"*",
+    "body-parser":"*",
+    "mongoose":"*"
+  },
+  "author": "Suraj Shrestha",
+  "license": "ISC"
+}

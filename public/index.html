@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact list app</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <script src="angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="myModule">
+
+    <div class="container" ng-controller="myController">
+        <h2>Contact list app</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th colspan="3">Action(s)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="form-control" ng-model="person.name"></td>
+                    <td><input class="form-control" ng-model="person.gender"></td>
+                    <td><input class="form-control" ng-model="person.city"></td>
+                    <td><input type="button" class="btn btn-primary" value="Add Contact" ng-click="addContact()"></td>
+                    <td><button class="btn btn-info" ng-click="update()">Update</button></td>
+                    <td><button class="btn btn-info" ng-click="clear()">Clear</button></td>
+                </tr>
+                <tr ng-repeat="person in persons">
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.gender }}</td>
+                    <td>{{ person.city }}</td>
+                    <td><input type="button" class="btn btn-danger" value="Delete" ng-click="remove(person._id)"></td>
+                    <td><input type="button" class="btn btn-warning" value="Edit" ng-click="edit(person._id)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
