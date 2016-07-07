@@ -30,7 +30,7 @@
                     <td><button class="btn btn-info" ng-click="update()">Update</button></td>
                     <td><button class="btn btn-info" ng-click="clear()">Clear</button></td>
                 </tr>
-                <tr ng-repeat="person in persons">
+                <tr ng-repeat="person in persons"|orderBy:'sort_id':true"> <!-- new item on top -->>
                     <td>{{ person.name }}</td>
                     <td>{{ person.gender }}</td>
                     <td>{{ person.city }}</td>
